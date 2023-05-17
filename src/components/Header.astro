@@ -3,30 +3,72 @@ import { MENU_ITEMS } from '../share/constants';
 import teslaLogo from '/tesla_logo.svg';
 ---
 
+<script>
+	const $menuItems = document.querySelectorAll('#menu-item');
+	const $indicator = document.getElementById('indicator');
+
+	//aplicando delegacion de eventos
+	/* 	document.addEventListener('mouseenter', (e) => {
+		if (e.target.matches('menu-item')) {
+			e.preventDefault();
+			console.log('encontre un link');
+		}
+	}); */
+
+	$menuItems.forEach((menuItem) => {
+		menuItem.addEventListener('mouseenter', (e) => {
+			const { width, height, left, top } = menuItem.getBoundingClientRect();
+
+			Object.entries({ width, height, left, top }).forEach(([key, value]) => {
+				$indicator.style.setProperty(key, `${value}px`);
+			});
+			$indicator.style.setProperty('opacity', '1');
+			$indicator.style.setProperty('visibility', 'visible');
+		});
+
+		menuItem.addEventListener('mouseleave', () => {
+			$indicator.style.setProperty('opacity', '0');
+			$indicator.style.setProperty('visibility', 'hidden');
+		});
+	});
+</script>
+
 <header
 	class='h-16 w-full px-8 flex justify-between items-center fixed z-10 text-white'>
 	<div class='w-fit'>
 		<img src={teslaLogo} alt='tesla logo' class='w-32' />
 	</div>
 	<nav>
-		<ul
-			class='flex justify-between items-center [&>li>a]:capitalize [&>li>a]:px-3 [&>li>a]:text-sm'>
+		<div
+			id='indicator'
+			class='absolute bg-white/20 rounded-sm opacity-0 backdrop-blur-lg -z-10 w-[var(--width)] h-[var(--height)] left-[var(--left)] top-[var(--top)] transition-all duration-300 ease-in-out'>
+		</div>
+		<ul class='flex justify-between items-center relative'>
 			{
 				MENU_ITEMS.CENTER.map((item) => (
 					<li>
-						<a href={item.to}>{item.label}</a>
+						<a
+							href={item.to}
+							id='menu-item'
+							class='capitalize px-3 py-2 text-sm'>
+							{item.label}
+						</a>
 					</li>
 				))
 			}
 		</ul>
 	</nav>
 	<nav>
-		<ul
-			class='flex justify-between items-center [&>li>a]:capitalize [&>li>a]:px-3 [&>li>a]:text-sm'>
+		<ul class='flex justify-between items-center relative'>
 			{
 				MENU_ITEMS.LEFT.map((item) => (
 					<li>
-						<a href={item.to}>{item.label}</a>
+						<a
+							href={item.to}
+							id='menu-item'
+							class='capitalize px-3 py-2 text-sm'>
+							{item.label}
+						</a>
 					</li>
 				))
 			}
