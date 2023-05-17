@@ -1,0 +1,16 @@
+---
+const { sectionTitle, sectionLegend, heroImage } = Astro.props;
+---
+
+<section class='h-screen w-full relative'>
+	<div class='absolute'>
+		<h2>{sectionTitle}</h2>
+		<p>{sectionLegend}</p>
+	</div>
+	<div>
+		<picture>
+			<img src={heroImage} alt={sectionTitle} />
+		</picture>
+	</div>
+	<slot />
+</section>
