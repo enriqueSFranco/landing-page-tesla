@@ -2,16 +2,20 @@
 const { sectionTitle, sectionLegend, heroImage } = Astro.props;
 ---
 
-<section class='h-screen w-full relative'>
-	<div id='section-watcher'></div>
+<section
+	id='section'
+	data-color='#000'
+	class='relative snap-always snap-center outline outline-2 outline-indigo-400'>
 	<div class='absolute'>
 		<h2>{sectionTitle}</h2>
 		<p>{sectionLegend}</p>
 	</div>
-	<div>
-		<picture>
-			<img src={heroImage} alt={sectionTitle} />
-		</picture>
+	<div class='h-full w-full'>
+		<img
+			src={heroImage}
+			alt={sectionTitle}
+			class='object-cover object-center max-w-full h-auto'
+		/>
 	</div>
 	<slot />
 </section>
