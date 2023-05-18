@@ -8,9 +8,28 @@ export const MENU_ITEMS = Object.freeze({
     { label: 'solar panels', to: '/' },
     { label: 'powerwall', to: '/' },
   ],
-  LEFT: [
-    { label: 'Shop', to: '/' },
-    { label: 'Account', to: '/' },
-    { label: 'Menu', to: '/' },
+  RIGHT: [
+    { label: 'shop', to: '/' },
+    { label: 'account', to: '/' },
+    { label: 'menu', to: '/', dataName: 'menu' },
+  ],
+  PANEL: [
+    { label: 'Existing Inventory' },
+    { label: 'Used Inventory' },
+    { label: 'Trade-In' },
+    { label: 'Demo Drive' },
+    { label: 'Insurance' },
+    { label: 'Fleet' },
+    { label: 'Cybertruck' },
+    { label: 'Roadster' },
+    { label: 'Semi' },
+    { label: 'Charging' },
+    { label: 'Commercial Energy' },
+    { label: 'Utilities' },
+    { label: 'Careers' },
+    { label: 'Find Us' },
+    { label: 'Events' },
+    { label: 'Support' },
+    { label: 'Investor Relations' },
   ]
 })

@@ -3,7 +3,9 @@ import mainVideo from '/assets/video/Homepage-Test_Drive.mp4';
 ---
 
 <section
-	class='w-full h-full bg-slate-500 grid place-items-center overflow-hidden relative'>
+	id='section'
+	data-color='#fff'
+	class='w-full h-full bg-black grid place-items-center overflow-hidden relative'>
 	<video
 		autoplay
 		loop
@@ -11,7 +13,7 @@ import mainVideo from '/assets/video/Homepage-Test_Drive.mp4';
 		<source src={mainVideo} type='video/mp4' />
 	</video>
 	<div
-		class='w-1/2 grid place-items-center absolute top-32 text-white outline outline-2 outline-red-500'>
+		class='w-1/2 h-[650px] flex flex-col items-center justify-between absolute top-32 text-white'>
 		<div class='flex flex-col items-center gap-1'>
 			<h1 class='capitalize font-semibold text-5xl tracking-wider'>
 				experience tesla
@@ -20,7 +22,7 @@ import mainVideo from '/assets/video/Homepage-Test_Drive.mp4';
 		</div>
 		<a
 			href=''
-			class='border-[3px] border-white px-6 py-1 w-[260px] h-[40px] text-center capitalize rounded-md'
+			class='border-[3px] border-white px-6 py-1 w-[264px] h-[40px] text-center capitalize rounded-md'
 			>demo drive</a
 		>
 	</div>
