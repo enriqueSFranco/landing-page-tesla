@@ -33,25 +33,9 @@ import teslaLogo from '/tesla_logo.svg';
 	});
 </script>
 
-<script>
-	const $header = document.getElementById('header');
-	const $sections = document.querySelectorAll('#section');
+<script src='../scripts/intersectionObserver.js'></script>
 
-	function fn([entry]) {
-		if (entry.isIntersecting) {
-			const textColor = entry.target.getAttribute('data-color');
-			$header.style.setProperty('color', textColor);
-		}
-	}
-
-	const watcher = new IntersectionObserver(fn, {
-		threshold: 0.8,
-	});
-
-	$sections.forEach((section) => {
-		watcher.observe(section);
-	});
-</script>
+<script src='../scripts/togglePanel.js'></script>
 
 <header
 	id='header'
@@ -80,9 +64,9 @@ import teslaLogo from '/tesla_logo.svg';
 		</ul>
 	</nav>
 	<nav>
-		<ul class='flex justify-between items-center relative'>
+		<ul id='nav-rigth' class='flex justify-between items-center relative'>
 			{
-				MENU_ITEMS.LEFT.map((item) => (
+				MENU_ITEMS.RIGHT.map((item) => (
 					<li>
 						<a
 							href={item.to}
