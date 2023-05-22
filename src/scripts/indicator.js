@@ -6,6 +6,12 @@
   }
 }); */
 
+/**
+ * La función handleIndicator se encarga de controlar un indicador visual que resalta
+ * el elemento activo en un menú cuando el cursor se sitúa sobre él.
+ * @param {HTMLElement[]} menuItems - Un arreglo de elementos del menú.
+ * @param {HTMLElement} indicator - El elemento indicador visual.
+ */
 export function handleIndicator (menuItems, indicator) {
   menuItems.forEach((menuItem) => {
     menuItem.addEventListener('mouseenter', (e) => {
