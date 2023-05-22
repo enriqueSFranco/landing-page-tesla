@@ -5,25 +5,30 @@ import mainVideo from '/assets/video/Homepage-Test_Drive.mp4';
 <section
 	id='section'
 	data-color='#fff'
-	class='w-full h-full bg-black grid place-items-center overflow-hidden relative'>
-	<video
-		autoplay
-		loop
-		class='min-w-full w-full min-h-screen h-full object-cover block'>
-		<source src={mainVideo} type='video/mp4' />
-	</video>
+	class='w-full h-screen snap-center bg-black overflow-hidden relative'>
 	<div
-		class='w-1/2 h-[650px] flex flex-col items-center justify-between absolute top-32 text-white'>
-		<div class='flex flex-col items-center gap-1'>
-			<h1 class='capitalize font-semibold text-5xl tracking-wider'>
+		class='max-sm:w-full h-full snap-center flex flex-col items-center text-white z-30 relative top-16'>
+		<hedaer class='flex flex-col items-center gap-2 mt-10'>
+			<h1
+				class='capitalize font-semibold text-5xl tracking-wider max-sm:text-4xl'>
 				experience tesla
 			</h1>
-			<p class='text-sm'>Schedule a Demo Drive Today</p>
-		</div>
-		<a
-			href=''
-			class='border-[3px] border-white px-6 py-1 w-[264px] h-[40px] text-center capitalize rounded-md'
-			>demo drive</a
-		>
+			<p class='text-md'>Schedule a Demo Drive Today</p>
+		</hedaer>
+		<footer class='flex flex-col flex-grow justify-end pb-28'>
+			<a
+				href=''
+				class='border-[3px] border-white px-6 py-1 w-[264px] h-[40px] text-center capitalize rounded-md'
+				>demo drive</a
+			>
+		</footer>
+	</div>
+	<div class='absolute top-0 bottom-0 h-full w-full'>
+		<video
+			autoplay
+			loop
+			class='min-w-full w-full min-h-screen h-full object-cover block'>
+			<source src={mainVideo} type='video/mp4' />
+		</video>
 	</div>
 </section>

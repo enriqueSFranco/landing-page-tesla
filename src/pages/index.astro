@@ -7,6 +7,8 @@ import Model3 from './Model3.astro';
 import ModelS from './ModelS.astro';
 import ModelX from './ModelX.astro';
 import ModelY from './ModelY.astro';
+import SolarPanels from './SolarPanels.astro';
+import SolarRoof from './SolarRoof.astro';
 ---
 
 <script src='../scripts/index.js'></script>
@@ -14,11 +16,13 @@ import ModelY from './ModelY.astro';
 <Layout>
 	<Header />
 	<Panel />
-	<main class='snap-y snap-mandatory'>
+	<main class='snap-y snap-mandatory relative h-screen overflow-scroll'>
 		<Home />
 		<ModelS />
 		<Model3 />
 		<ModelX />
 		<ModelY />
+		<SolarPanels />
+		<SolarRoof />
 	</main>
 </Layout>
