@@ -1,10 +1,12 @@
 ---
+import FooterNav from '../components/FooterNav.astro';
 import LayoutSection from '../layouts/LayoutSection.astro';
 import modelS from '/assets/images/Homepage-Model-Y-Global-Desktop.avif';
 ---
 
 <LayoutSection
 	sectionTitle='model Y'
-	sectionSubTitle='view inventory'
-	heroImage={modelS}
-/>
+	sectionLegend='view inventory'
+	heroImage={modelS}>
+	<FooterNav firstLink='order now' lastLink='demo drive' />
+</LayoutSection>

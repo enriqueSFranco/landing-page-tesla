@@ -1,0 +1,9 @@
+---
+const { firstLink, lastLink } = Astro.props;
+---
+
+<nav
+	class='h-16 w-screen flex items-center justify-center gap-6 [&>a]:px-6 [&>a]:py-2 [&>a]:rounded-md [&>a]:grid [&>a]:place-items-center [&>a]:capitalize [&>a]:w-[264px] [&>a]h-[40px]'>
+	<a href='' class='bg-[#3a3d40]'>{firstLink}</a>
+	<a href='' class='bg-white/50 backdrop-blur-sm text-black'>{lastLink}</a>
+</nav>
