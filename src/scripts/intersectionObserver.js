@@ -2,7 +2,7 @@ const $header = document.getElementById('header');
 const $sections = document.querySelectorAll('#section');
 
 
-function setupIntersectionObserver (header, sections) {
+export function setupIntersectionObserver (header, sections) {
   const updateHeaderColor = ([entry]) => {
     if (entry.isIntersecting) {
       const textColor = entry.target.getAttribute('data-color');
@@ -18,5 +18,3 @@ function setupIntersectionObserver (header, sections) {
     watcher.observe(section);
   });
 }
-
-setupIntersectionObserver($header, $sections)

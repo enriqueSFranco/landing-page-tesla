@@ -2,7 +2,7 @@ const $menuBtn = document.querySelector('#nav-rigth li:last-child a');
 const $main = document.querySelector('main')
 const $header = document.getElementById('header')
 
-function togglePanel (panel, selector) {
+export function togglePanel (panel, selector) {
   document.addEventListener('click', (e) => {
     if (e.target.matches(selector)) {
       e.preventDefault();
@@ -14,5 +14,3 @@ function togglePanel (panel, selector) {
     }
   });
 }
-
-togglePanel(document.getElementById('panel'), '#nav-rigth li:last-child a');
